@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codigo</title>
+    <style>
+        .enemy{
+            float: left;
+            width: 200px;
+            height: 350px;
+            border: 1px black solid;
+            margin: 10px 0 10px 0;
+            padding: 10px;
+        }
+        .mainPlayer{
+            width: 300px;
+            height: 500px;
+            border: 1px red solid;
+            margin: 10px 0 10px 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tercera entrega</h1>
+    <div class="mainPlayer">
+        <div>
+            <h2>Jugador Principal</h2>
+            <label for="name"></label>
+            <input type="text" id="name">
+            <button id = 'nameButton'>Asignar nombre</button>
+            <img src="./img/main_player.png" width="200" alt="" srcset="">
+        </div>
+        <div>
+            <p><strong>Nombre:</strong> <span id="displayName">Walter White</span></p>
+            <p><strong>Nivel:</strong> <span id="displayLevel"></span></p>
+            <button id = 'resetLevelButton'>Reiniciar nivel</button>
+        </div>
+        <div>            
+        </div>
+    </div>
+    <div class="enemy" id="enemyOne">
+        <div>
+            <img src="./img/enemy_one.png" width="150" alt="" srcset="">
+        </div>
+        <div>
+            <p><strong>Nombre:</strong> <span id="displayNameEnemyOne"></span></p>
+            <p><strong>Nivel:</strong> <span id="displayLevelEnemyOne"></span></p>
+        </div>
+        <div>
+            <button id = 'attackEnemyOne' onclick="attackEnemy(1)">Atacar</button>
+        </div>
+    </div>
+    <div class="enemy" id="enemyTwo">
+        <div>
+            <img src="./img/enemy_two.png" width="150" alt="" srcset="">
+        </div>
+        <div>
+            <p><strong>Nombre:</strong> <span id="displayNameEnemyTwo"></span></p>
+            <p><strong>Nivel:</strong> <span id="displayLevelEnemyTwo"></span></p>
+        </div>
+        <div>
+            <button id = 'attackEnemyTwo' onclick="attackEnemy(2)">Atacar</button>
+        </div>
+    </div>
+    <div class="enemy" id="enemyThree">
+        <div>
+            <img src="./img/enemy_three.png" width="150" alt="" srcset="">
+        </div>
+        <div>
+            <p><strong>Nombre:</strong> <span id="displayNameEnemyThree"></span></p>
+            <p><strong>Nivel:</strong> <span id="displayLevelEnemyThree"></span></p>
+        </div>
+        <div>
+            <button id = 'attackEnemyThree' onclick="attackEnemy(3)">Atacar</button>
+        </div>
+    </div>
+    <div class="enemy" id="enemyFour">
+        <div>
+            <img src="./img/enemy_four.png" width="150" alt="" srcset="">
+        </div>
+        <div>
+            <p><strong>Nombre:</strong> <span id="displayNameEnemyFour"></span></p>
+            <p><strong>Nivel:</strong> <span id="displayLevelEnemyFour"></span></p>
+        </div>
+        <div>
+            <button id = 'attackEnemyFour' onclick="attackEnemy(4)">Atacar</button>
+        </div>
+    </div>
+
+    
+
+    <script src="main.js">
+
+
+    </script>
+</body>
+</html>
