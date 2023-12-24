@@ -1,4 +1,3 @@
-
 let mainPlayer = {
     name: "Walter White",
     level: localStorage.getItem("mainPlayerLevel")
@@ -53,6 +52,11 @@ function attackEnemy(enemyId) {
         document.getElementById("displayLevel").innerText = mainPlayer.level
         localStorage.setItem("mainPlayerLevel", mainPlayer.level);
     }else{
-        alert("Tu nivel no es suficiente para derrotar a " + enemy.name)
+        Swal.fire({
+            title: 'Error!',
+            text: "Tu nivel no es suficiente para derrotar a " + enemy.name,
+            icon: 'error',
+            confirmButtonText: 'Entendido'
+          })
     }
 }
