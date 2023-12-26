@@ -44,7 +44,12 @@ function attackEnemy(enemyId) {
     const enemy = enemies[enemyId-1]
     const nextEnemy = enemies[enemyId]
     if (mainPlayer.level > enemy.level) {
-        alert("Haz derrotado a " + enemy.name)
+        Swal.fire({
+            title: 'Bien!',
+            text: "Haz derrotado a " + enemy.name,
+            icon: 'success',
+            confirmButtonText: 'Entendido'
+          })
         let newLevel = nextEnemy.level + 1
         if (newLevel > mainPlayer.level) {
             mainPlayer.level = newLevel
