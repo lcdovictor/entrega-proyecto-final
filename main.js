@@ -37,7 +37,12 @@ function resetLevel() {
     localStorage.setItem("mainPlayerLevel", 2);
     mainPlayer.level = 2
     document.getElementById("displayLevel").innerText = mainPlayer.level
-    alert("Nivel de jugador principal reiniciado")
+    Swal.fire({
+        title: "Nivel de jugador principal reiniciado",
+        text: "",
+        icon: 'success',
+        confirmButtonText: 'Entendido'
+      })
 }
 
 function attackEnemy(enemyId) {
@@ -45,8 +50,8 @@ function attackEnemy(enemyId) {
     const nextEnemy = enemies[enemyId]
     if (mainPlayer.level > enemy.level) {
         Swal.fire({
-            title: 'Bien!',
-            text: "Haz derrotado a " + enemy.name,
+            title: "Haz derrotado a " + enemy.name,
+            text: "",
             icon: 'success',
             confirmButtonText: 'Entendido'
           })
@@ -58,8 +63,8 @@ function attackEnemy(enemyId) {
         localStorage.setItem("mainPlayerLevel", mainPlayer.level);
     }else{
         Swal.fire({
-            title: 'Error!',
-            text: "Tu nivel no es suficiente para derrotar a " + enemy.name,
+            title: "Tu nivel no es suficiente para derrotar a " + enemy.name,
+            text: "",
             icon: 'error',
             confirmButtonText: 'Entendido'
           })
