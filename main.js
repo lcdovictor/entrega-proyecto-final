@@ -34,11 +34,32 @@ function setName() {
     document.getElementById("displayName").innerText = username
 }
 function resetLevel() {
-    localStorage.setItem("mainPlayerLevel", 2);
-    mainPlayer.level = 2
+    //localStorage.setItem("mainPlayerLevel", 2);
+    
+    mainPlayer.level = Math.floor(Math.random() * 15);
+
+
+    let nivelJugador = mainPlayer.level
+    let nivelesEnemigos = []
+
+    for (let index = 0; index < enemies.length; index++) {
+        nivelesEnemigos[index] = enemies[index].level;
+    }
+
+    let nivelesEnemigosDerrotables = nivelesEnemigos.map(x => x > nivelJugador)
+
+    let cantidadDeEnemigosDerrotables = 0 
+    
+    nivelesEnemigosDerrotables.forEach(x => {
+        cantidadDeEnemigosDerrotables += !x? 1:0
+    })
+
+    console.log(cantidadDeEnemigosDerrotables)
+
     document.getElementById("displayLevel").innerText = mainPlayer.level
+
     Swal.fire({
-        title: "Nivel de jugador principal reiniciado",
+        title: "Puedes derrotar a " + cantidadDeEnemigosDerrotables + " enemigos",
         text: "",
         icon: 'success',
         confirmButtonText: 'Entendido'
